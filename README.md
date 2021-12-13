@@ -28,6 +28,7 @@ kubectl describe configmap domain
 kubectl get configmap nginx-config -o yaml
 kubectl get configmap domain -o json
 ```
+![](https://github.com/murzinvit/screen_1/blob/81aa13189910930fa1442eecc904d50367cc38fe/Kuber_get_configmap_yaml.jpg) </br>
 
 ### Как выгрузить карту конфигурации и сохранить его в файл?
 ```
