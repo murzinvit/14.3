@@ -32,3 +32,29 @@ spec:
           name: nginx-config
 EOF
 ---------------------
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    name: nginx-pod-lbl
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    imagePullPolicy: IfNotPresent
+    ports:
+    - name: nginx
+      containerPort: 80
+      protocol: TCP
+    volumeMounts:
+    - name: index-html
+      mountPath: /usr/share/nginx/html/index.html
+  volumes:
+  - name: index-html
+    configMap:
+      name: index-html
+EOF
+----
+kubectl create configmap index-html --from-file=index.html
