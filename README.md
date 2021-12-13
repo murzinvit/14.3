@@ -35,16 +35,19 @@ kubectl get configmap domain -o json
 kubectl get configmaps -o json > configmaps.json
 kubectl get configmap nginx-config -o yaml > nginx-config.yml
 ```
+![download_yaml](https://github.com/murzinvit/screen_1/blob/e3c1510aba56bc109d4b5bbc4900c0491bee24ca/Kuber_configmap_download_yaml.jpg) </br>
 
 ### Как удалить карту конфигурации?
 ```
 kubectl delete configmap nginx-config
 ```
+![delete_configmap](https://github.com/murzinvit/screen_1/blob/9bb22f19f18e24123188103283d8d347add571fe/Kuber_delete_configmap.jpg) </br>
 
 ### Как загрузить карту конфигурации из файла?
 ```
 kubectl apply -f nginx-config.yml
 ```
+![](https://github.com/murzinvit/screen_1/blob/d80d22d7b2d2c73b434ecb16c7276a7664eb1ef9/Kuber_create_configmap_from_yaml.jpg) </br>
 
 ## Задача 2 (*): Работа с картами конфигураций внутри модуля </br>
 Выбрать любимый образ контейнера, подключить карты конфигураций и проверить </br>
