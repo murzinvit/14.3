@@ -7,18 +7,21 @@
 kubectl create configmap nginx-config --from-file=nginx.conf
 kubectl create configmap domain --from-literal=name=netology.ru
 ```
+![config_map](https://github.com/murzinvit/screen_1/blob/581e6513f7410ebfbb738bf8092f82661c034fd0/Kuber_config_map_create.jpg) </br>
 
 ### Как просмотреть список карт конфигураций?
 ```
 kubectl get configmaps
 kubectl get configmap
 ```
+![get_config](https://github.com/murzinvit/screen_1/blob/ae4fdd313f6996087f6c3c16500536d8b57874e1/Kuber_get_config_.jpg) </br>
 
 ### Как просмотреть карту конфигурации?
 ```
 kubectl get configmap nginx-config
 kubectl describe configmap domain
 ```
+![conf_map](https://github.com/murzinvit/screen_1/blob/4d5ba71474da7622ba6ae6150481fdd120250756/Kuber_describe_conf_map.jpg) </br>
 
 ### Как получить информацию в формате YAML и/или JSON?
 ```
