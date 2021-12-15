@@ -67,6 +67,7 @@ YAML для деплоя configmap + nginx + service NodePort:  </br>
 
 ### Для пода с nginx: </br>
 Создать configmap из папки nginx: `kubectl create configmap nginx-conf --from-file=nginx` </br>
+Запуск пода: [nginx-pod-conf.yaml](https://github.com/murzinvit/14.3_configmap/blob/a9316dcffdc4dbe0c23d983088cfe5165b8763c0/nginx-pod-conf.yaml) </br>
 ![](https://github.com/murzinvit/screen_1/blob/315799cf543a232381e7bd355da99894359f9a21/Kuber_configmap_from_folder.jpg) </br>
 
 ---
