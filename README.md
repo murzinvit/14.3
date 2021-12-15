@@ -71,6 +71,5 @@ YAML для деплоя configmap + nginx + service NodePort:  </br>
 ![](https://github.com/murzinvit/screen_1/blob/315799cf543a232381e7bd355da99894359f9a21/Kuber_configmap_from_folder.jpg) </br>
 
 ---
-
-### Как оформить ДЗ
-В качестве решения прикрепите к ДЗ конфиг файлы для деплоя. Прикрепите скриншоты вывода команды kubectl со списком запущенных объектов каждого типа (pods, deployments, configmaps) или скриншот из самого Kubernetes, что сервисы подняты и работают, а также вывод из CLI.
+### work links:</br>
+[https://ealebed.github.io](https://ealebed.github.io/posts/2018/%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D0%BC%D1%81%D1%82%D0%B2%D0%BE-%D1%81-kubernetes-%D1%87%D0%B0%D1%81%D1%82%D1%8C-13-%D0%BA%D0%BE%D0%BD%D1%84%D0%B8%D0%B3%D0%BC%D0%B0%D0%BF%D1%8B-configmap/)
