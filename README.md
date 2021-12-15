@@ -58,6 +58,13 @@ YAML для деплоя configmap + nginx + service NodePort:  </br>
 ![](https://github.com/murzinvit/screen_1/blob/eaada1ec3a5425be13703d82552defc0e822d459/Kuber_get_configmap_po.jpg) </br>
 
 ---
+Создать configmap из файла: `kubectl create configmap mysql-config --from-file=mysql.cnf` </br>
+Выгрузить configmap в yaml: `kubectl get configmap mysql-config -o yaml > mysql-config.yml` </br>
+После выгрузки у далить TimeShtamp из mysql-config.yml </br>
+Создать configmap из выгруженного yaml: `kubectl apply -f mysql-config.yml` </br>
+
+
+---
 
 ### Как оформить ДЗ
 В качестве решения прикрепите к ДЗ конфиг файлы для деплоя. Прикрепите скриншоты вывода команды kubectl со списком запущенных объектов каждого типа (pods, deployments, configmaps) или скриншот из самого Kubernetes, что сервисы подняты и работают, а также вывод из CLI.
