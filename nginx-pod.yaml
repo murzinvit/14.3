@@ -1,0 +1,52 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  default.conf: |
+    server {
+        listen       80 default_server;
+        server_name  _;
+
+        default_type text/plain;
+
+        location / {
+            return 200 '\n';
+        }
+    }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    name: nginx-pod-lbl
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - name: nginx
+      containerPort: 80
+      protocol: TCP
+    volumeMounts:
+    - name: nginx-conf
+      mountPath: /etc/nginx/conf.d/
+  volumes:
+  - name: nginx-conf
+    configMap:
+      name: nginx-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc
+  labels:
+    name: nginx-svc-lbl
+spec:
+  ports:
+  - port: 80
+  selector:
+    name: nginx-pod-lbl
+  type: NodePort
