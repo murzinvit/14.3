@@ -53,6 +53,10 @@ kubectl apply -f nginx-config.yml
 Выбрать любимый образ контейнера, подключить карты конфигураций и проверить </br>
 их доступность как в виде переменных окружения, так и в виде примонтированного тома </br>
 
+YAML для деплоя configmap + nginx + service NodePort:  </br> 
+[nginx-pod.yaml](https://github.com/murzinvit/14.3_configmap/blob/bec703ffe954f890c279020695c021fba519d451/nginx-pod.yaml) </br>
+![](https://github.com/murzinvit/screen_1/blob/eaada1ec3a5425be13703d82552defc0e822d459/Kuber_get_configmap_po.jpg) </br>
+
 ---
 
 ### Как оформить ДЗ
