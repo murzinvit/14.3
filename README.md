@@ -64,7 +64,10 @@ YAML для деплоя configmap + nginx + service NodePort:  </br>
 Выгрузить configmap в yaml: `kubectl get configmap mysql-config -o yaml > mysql-config.yml`[mysql-config.yml](https://github.com/murzinvit/14.3_configmap/blob/db5546285578c689e864e28d6c0ea98a1f79b35b/mysql-config.yml) </br>
 После выгрузки у далить `creationTimestamp: "2021-12-15T17:09:43Z"` выгруженного mysql-config.yml </br>
 Создать configmap из выгруженного yaml: `kubectl apply -f mysql-config.yml`[mysql-config.yml](https://github.com/murzinvit/14.3_configmap/blob/db5546285578c689e864e28d6c0ea98a1f79b35b/mysql-config.yml) </br>
+
 ### Для пода с nginx: </br>
+
+
 
 
 ---
