@@ -1,0 +1,17 @@
+apiVersion: v1
+data:
+  mysql.cnf: "[client]\nport        = 3306\nsocket      = \n[mysqld_safe]\nsocket
+    \     = \nnice        = 0\nmysqld]\n# * Basic Settings\nuser        = mysql\npid-file
+    \   = /var/run/mysqld/mysqld.pid\nsocket      = /var/run/mysqld/mysqld.sock\nport
+    \       = 3306\nbasedir     = /usr\ndatadir     = /var/lib/mysql\ntmpdir      =
+    /tmp\nlc-messages-dir = /usr/share/mysql\nskip-external-locking\nsql-mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION\nkey_buffer_size
+    \    = 16M\nmax_allowed_packet  = 16M\nthread_stack        = 258K\nthread_cache_size
+    \      = 8\nmyisam_recover_options  = BACKUP\nmax_connections         = 50\nquery_cache_limit
+    = 2M\nquery_cache_size        = 15M\nlog_error = /var/log/mysql/error.log\n[mysqldump]\nquick\nquote-names\nmax_allowed_packet
+    \ = 16M\n[mysql]\nlocal-infile=1\n[isamchk]\nkey_buffer_size     = 8M\n\n"
+kind: ConfigMap
+metadata:
+  name: mysql-config
+  namespace: stage
+  resourceVersion: "1352148"
+  uid: a17271ac-ea4e-44a8-a5d9-c052d2c27209
